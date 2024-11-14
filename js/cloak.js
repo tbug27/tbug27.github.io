@@ -1,5 +1,5 @@
 let favicon = document.createElement("link")
-const filesURL = "https://uniub.github.io/files"
+const filesURL = "https://jobidev.github.io/files"
 let storage
 favicon.rel = "icon"
 
