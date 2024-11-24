@@ -3,7 +3,7 @@ self.__uv$config = {
     prefix: '/uv/service/',
 
     /* Bare server URL */ 
-    bare: 'https://getto.masplenedigitalworld.com/bare/',
+    bare: 'https://dw5pdmvyc2fs-dw5ibg9ja2vy.io2lx7.workers.dev/',
     
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
