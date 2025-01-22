@@ -1,1 +1,4 @@
-.vs/
+node_modules/
+public/files/games/
+public/files/embeds/
+.vercel

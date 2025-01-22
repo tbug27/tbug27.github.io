@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="/js/common.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>UniUB | Home</title>
+  </head>
+  <body>
+    
+    <div id="loader" class="content" style="position: absolute; z-index: 99999999; background-color: var(--background-light); display: flex; justify-content: center; align-items: center; flex-direction: column;">
+      <div class="container" style="margin-bottom: 25px;">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <h3 id="loader-text">Just a moment while we get everything set up...</h3>
+      <!--Loader-->
+      <link rel="stylesheet" href="/styles/loader.css">
+      <script src="/js/loader.js"></script>
+      <!--Loader-->
+    </div>
+
+    <div class="content">
+      <div id="sidebar"></div>
+      <iframe class="main" src="/pages/home.html"></iframe>
+    </div>
+  </body>
+<script>
+const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+let currentKeyIndex = 0;
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === code[currentKeyIndex]) {
+        currentKeyIndex++;
+        if (currentKeyIndex === code.length) {
+            window.location.pathname = "/images/videos/quirky.mp4"
+            currentKeyIndex = 0;
+        }
+    } else {
+        currentKeyIndex = 0;
+    }
+});
+</script>
+</html>

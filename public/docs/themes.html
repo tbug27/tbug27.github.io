@@ -1,0 +1,118 @@
+<style>*{font-family: sans-serif;} div{border: 1px solid black; width: min-content; padding: 20px;} kbd{background-color:lightgray;font-family: monospace;}</style>
+<h1>Theme creation guide</h1>
+<p>A guide on creating themes, and what is currently supported!</p>
+<kbd>Last updated: 1/17/25</kbd>
+
+<br>
+
+<h2>Format</h2>
+<p>All themes should have a list of css variables.</p>
+
+<p>Here is an example of the default theme!</p>
+
+<textarea readonly="true" style="resize: none; height: 400px; width: 500px;">
+:root {
+    /* Font settings */
+    --font-family: sans-serif;
+    --font-color: rgb(255, 255, 255); /* White */
+
+    /* Custom */
+    --sidebar-size: 50px;
+    --sidebar-icon-color: rgb(255,255,255);
+
+    /* Background colors */
+    --primary-light: rgb(225, 160, 255); /* Light purple */
+    --primary-mid: rgb(180, 100, 230);   /* Medium purple */
+    --primary-dark: rgb(130, 70, 190);   /* Dark purple */
+    --accent-color: rgb(100, 70, 130);   /* Muted purple accent */
+    --accent-color-dark: rgb(85, 60, 110); /* Darker purple accent */
+
+    --background-dark: rgb(11, 5, 15); /* Deep purple-black */
+    --background-light: rgb(27, 13, 41); /* Soft purple-gray */
+}
+</textarea>
+
+<p>A few variables have fallback values, like if there is no <kbd>--sidebar-icon-color</kbd> set, it will default to <kbd>rgb(255,255,255)</kbd></p>
+<p>Even if a variable has a fallback value, it is still heavily recommended to overwrite it by including it in your theme!</p>
+
+<h2>Customization</h2>
+
+<p>I recommend using the base provided above as a template / start to all of your plugins!</p>
+<p>I heavily recommend keeping the variables in, but your not limited, you can add <b>any</b> css you'd want!</p>
+
+<p>Heres an example with one of the most complex themes the site has, made by <b>Tuye</b>.</p>
+<p>This theme is called 'I don't have a name for this but its PEAK'</p>
+
+<textarea readonly="true" style="resize: none; height: 400px; width: 500px;">
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..700&display=swap');
+
+:root {
+  --font-family: 'Orbitron', sans-serif;
+  --font-color: rgb(0, 200, 255);
+  --sidebar-size: 60px;
+  --primary-light: rgb(0, 150, 255);
+  --primary-mid: rgb(0, 120, 200);
+  --primary-dark: rgb(0, 90, 150);
+  --accent-color: rgb(0, 60, 120);
+  --accent-color-dark: rgb(0, 40, 80);
+  --background-dark: rgb(10, 10, 30);
+  --background-light: rgb(20, 20, 50);
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--font-color);
+  background: linear-gradient(135deg, var(--background-dark) 60%, var(--background-light) 40%);
+}
+
+.sidebar {
+  width: var(--sidebar-size);
+  background: var(--accent-color-dark);
+  border-right: 3px solid var(--accent-color);
+}
+
+h1, h2, h3 {
+  color: var(--primary-light);
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--primary-dark);
+  letter-spacing: 3px;
+}
+
+button {
+  background: var(--primary-mid);
+  border: 3px solid var(--primary-dark);
+  color: var(--font-color);
+  font-size: 14px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--primary-light);
+  color: var(--background-dark);
+  transform: translateY(-3px) scale(1.1);
+}
+
+input, textarea {
+  background: var(--background-light);
+  border: 3px solid var(--accent-color);
+  color: var(--font-color);
+  padding: 8px;
+  font-family: var(--font-family);
+}
+
+a {
+  color: var(--primary-mid);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--primary-light);
+  text-shadow: 0 0 7px var(--primary-dark);
+}
+</textarea>
+
+<p>As you can see, you can add <b>any</b> css you'd like to the site by creating a theme!</p>
+<p>If you think something should be added to this page, please let me know in #upd-suggestions.</p>
