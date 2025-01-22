@@ -5,8 +5,6 @@
 **10+ Apps**<br>
 **Settings**<br>
 <br>
-
 **Join the discord <a target="_blank" href="https://dsc.gg/uniub">here!</a>**
-
 <br>
-If you like this project, please star the repo!
+**If you like this project, please star the repo!**
